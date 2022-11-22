@@ -16,4 +16,8 @@ internal static class ParserBuilder {
   internal static IParser? GetParser(string name) {
     return _parsers.ContainsKey(name) ? _parsers[name] : null;
   }
+
+  static ParserBuilder() {
+    ParserBuilder.MapParser<UrfuParser>();
+  }
 }
